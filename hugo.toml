@@ -1,4 +1,4 @@
-baseURL = 'https://xrichard-blog.vercel.app/'
+baseURL = 'https://hugo-blog-pied.vercel.app/'
 languageCode = 'zh-cn'
 title = 'XRichard Blog'
 theme = 'hugo-theme-stack'
