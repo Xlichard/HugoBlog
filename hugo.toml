@@ -1,0 +1,89 @@
+baseURL = 'https://xrichard-blog.vercel.app/'
+languageCode = 'zh-cn'
+title = 'XRichard Blog'
+theme = 'hugo-theme-stack'
+defaultContentLanguage = 'zh-cn'
+hasCJKLanguage = true
+
+[pagination]
+    pagerSize = 5
+
+[permalinks]
+    posts = '/p/:slug/'
+    page = '/:slug/'
+
+[params]
+    mainSections = ['posts']
+    rssFullContent = true
+    favicon = ''
+
+    [params.footer]
+        since = 2024
+
+    [params.sidebar]
+        emoji = '🚀'
+        subtitle = '记录技术与生活'
+
+    [params.article]
+        headingAnchor = true
+        toc = true
+        readingTime = true
+
+        [params.article.license]
+            enabled = true
+            default = 'Licensed under CC BY-NC-SA 4.0'
+
+    [params.widgets]
+        homepage = [
+            { type = 'search' },
+            { type = 'archives', params = { limit = 5 } },
+            { type = 'tag-cloud', params = { limit = 10 } },
+        ]
+        page = [{ type = 'toc' }]
+
+    [params.colorScheme]
+        toggle = true
+        default = 'auto'
+
+    [params.imageProcessing.cover]
+        enabled = true
+
+    [params.imageProcessing.content]
+        enabled = true
+
+    [params.comments]
+        enabled = false
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
+    [markup.tableOfContents]
+        endLevel = 4
+        ordered = true
+        startLevel = 2
+
+    [markup.highlight]
+        noClasses = false
+        codeFences = true
+        guessSyntax = true
+        lineNos = true
+        tabWidth = 4
+
+[related]
+    includeNewer = true
+    threshold = 60
+    toLower = false
+    indices = [
+        { name = 'tags', weight = 100 },
+        { name = 'categories', weight = 200 },
+    ]
+
+[[menu.social]]
+    identifier = 'github'
+    name = 'GitHub'
+    url = 'https://github.com/Xlichard'
+
+    [menu.social.params]
+        icon = 'brand-github'
